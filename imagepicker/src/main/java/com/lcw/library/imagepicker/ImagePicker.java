@@ -131,6 +131,11 @@ public class ImagePicker {
         ConfigManager.getInstance().setImagePaths(imagePaths);
         return mImagePicker;
     }
+    
+    public ImagePicker setOnImagePickingFinish(OnImagePickingFinish onImagePickingFinish) {
+        ConfigManager.getInstance().setOnImagePickingFinish(onImagePickingFinish);
+        return mImagePicker;
+    }
 
     /**
      * 启动
