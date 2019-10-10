@@ -24,6 +24,7 @@ public class ConfigManager {
     private int maxCount = 1;//最大选择数量，默认为1
     private boolean singleType;//是否只支持选单类型（图片或者视频）
     private ArrayList<String> imagePaths;//上一次选择的图片地址集合
+    private OnImagePickingFinish onImagePickingFinish;
 
     private ImageLoader imageLoader;
 
@@ -49,6 +50,14 @@ public class ConfigManager {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+    
+    public void setOnImagePickingFinish(OnImagePickingFinish onImagePickingFinish) {
+        this.onImagePickingFinish = onImagePickingFinish;
+    }
+    
+    public OnImagePickingFinish getOnImagePickingFinish() {
+        return this.onImagePickingFinish;
     }
 
     public boolean isShowCamera() {
